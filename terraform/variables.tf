@@ -9,3 +9,13 @@ variable "subnets" {
 variable "security_groups" {
   type = list(string)
 }
+
+variable "db_username" {
+  type        = string
+  description = "The username for the RDS instance"
+}
+
+variable "db_password" {
+  type        = string
+  description = "The password for the RDS instance"
+}
