@@ -1,5 +1,5 @@
 # Use uma imagem base com JDK 17
-FROM eclipse-temurin:17-jdk-alpine as builder
+FROM eclipse-temurin:19-jdk-alpine as builder
 
 # Defina o diretório de trabalho dentro do container
 WORKDIR /app
