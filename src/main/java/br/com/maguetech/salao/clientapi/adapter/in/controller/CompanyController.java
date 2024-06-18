@@ -1,7 +1,8 @@
-package com.store.auth.controller;
+package br.com.maguetech.salao.clientapi.adapter.in.controller;
 
-import com.store.auth.domain.Company;
-import com.store.auth.service.CompanyService;
+
+import br.com.maguetech.salao.clientapi.core.CompanyService;
+import br.com.maguetech.salao.clientapi.domain.Company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

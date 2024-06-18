@@ -1,6 +1,6 @@
-package com.store.auth.controller;
+package br.com.maguetech.salao.clientapi.adapter.in.controller;
 
-import com.store.auth.service.GenericService;
+import br.com.maguetech.salao.clientapi.core.GenericService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

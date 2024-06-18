@@ -21,7 +21,7 @@ COPY src ./src
 RUN ./mvnw package -DskipTests
 
 # Utilize uma imagem base mais leve para rodar a aplicação
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:19-jre-alpine
 
 # Defina o diretório de trabalho dentro do container
 WORKDIR /app

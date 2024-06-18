@@ -1,10 +1,10 @@
-package com.store.auth.controller;
+package br.com.maguetech.salao.clientapi.adapter.in.controller;
 
-import com.store.auth.domain.User;
-import com.store.auth.service.UserService;
+import br.com.maguetech.salao.clientapi.core.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import br.com.maguetech.salao.clientapi.domain.User;
 
 import java.util.List;
 
