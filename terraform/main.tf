@@ -50,3 +50,33 @@ resource "aws_ecs_service" "main" {
     type = "ECS"
   }
 }
+
+
+resource "aws_secretsmanager_secret" "db_credentials" {
+  name = "rds-db-credentials"
+}
+
+resource "aws_secretsmanager_secret_version" "db_credentials" {
+  secret_id = aws_secretsmanager_secret.db_credentials.id
+  secret_string = jsonencode({
+    username = var.db_username
+    password = var.db_password
+  })
+}
+
+resource "aws_db_instance" "default" {
+  allocated_storage    = 20
+  storage_type         = "gp2"
+  engine               = "postgres"
+  engine_version       = "13.3"
+  instance_class       = "db.t3.micro"
+  name                 = "mydatabase"
+  username             = var.db_username
+  password             = var.db_password
+  parameter_group_name = "default.postgres13"
+  skip_final_snapshot  = true
+
+  tags = {
+    Name = "my-postgresql-db"
+  }
+}
